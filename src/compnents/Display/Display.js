@@ -1,9 +1,18 @@
-const Display =()=>{
+const Display =({isLogged})=>{
+        console.log([isLogged]);
+
   return(
     <>
-      <div>
-        display
+      {isLogged === true ? (
+      <div className="ok">
+        acertou
       </div>
+        ):(
+      <div className="wrong">
+        usuario nao encontrado
+      </div>
+
+      )}
     </>
   )
 }
